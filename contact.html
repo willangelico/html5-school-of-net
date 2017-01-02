@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<title>HTML5 - Contato</title>
+	</head>
+	<body>
+		<header>
+			<h1>Contato</h1>
+		</header>	
+		<section>
+			<h2>Novos Inputs do Html5</h2>
+			<form>
+				<div class="form-group">
+					<label>Color</label>
+					<input type="color" />
+				</div>
+				<div class="form-group">
+					<label>Date</label>
+					<input type="date" />
+				</div>
+				<div class="form-group">
+					<label>DateTime-local</label>
+					<input type="datetime-local" />
+				</div>
+				<div class="form-group">
+					<label>Month</label>
+					<input type="month" />
+				</div>
+				<div class="form-group">
+					<label>Week</label>
+					<input type="week" />
+				</div>
+				<div class="form-group">
+					<label>Time</label>
+					<input type="time" />
+				</div>
+				<div class="form-group">
+					<label>E-mail</label>
+					<input type="email" />
+				</div>
+
+				<div class="form-group">
+					<label>Number</label>
+					<input type="number" min="-5" max="5" step="2" />
+				</div>
+				<div class="form-group">
+					<label>Range</label>
+					<input type="range" min="-10" max="10" step="3" onchange="updateTxtRange(this.value);" />
+					<input type="text" id="txt_range" />
+					<script>
+						function updateTxtRange(num){
+							document.getElementById('txt_range').value = num;
+						}
+					</script>
+				</div>
+				<div class="form-group">
+					<label>Search</label>
+					<input type="search" />
+				</div>
+				<div class="form-group">
+					<label>Url</label>
+					<input type="url" />
+				</div>
+				<div class="form-group">
+					<label>List</label>
+					<input list="languages" name="languages" title="Escolha a linguagem" x-moz-errormessage="Escolha a linguagem no FF" required>
+					<datalist id="languages">
+						<option value="Html-">Html</option>
+						<option value="CSS-">CSS</option>
+						<option value="Javascript-">Javascript</option>
+						<option value="PHP-">PHP</option>
+					</datalist>
+				</div>
+				<button>Enviar</button>
+			</form>
+		</section>
+
+		<section>
+			<h2>Outputs</h2>
+			<form oninput="x.value = parseInt(a.value) + parseInt(b.value), y.value = parseInt(a.value)">
+				0
+				<input type="range" id="a" name="a" value="50" min="0" max="100" /> 
+				100
+				+
+				<input type="text" name="b" value="0">
+				=
+				<output name="x"></output>
+				<output name="y"></output>
+			</form>
+
+		</section>
+
+		<section>
+			<h2>Autocomplete e placeholder</h2>
+			<form>
+				<div class="form-group">
+					<input type="text" name="name" placeholder="Nome" />
+				</div>
+				<div class="form-group">
+					<input type="text" name="surname" placeholder="Sobrenome" />
+				</div>
+				<div class="form-group">
+					<input type="email" name="email" placeholder="E-mail" autocomplete="off" />
+				</div>
+				<button>Enviar</button>
+			</form>
+		</section>
+
+		<section>
+			<h2>Novalidate e autofocus</h2>
+			<form>
+				<div class="form-group">
+					<input type="text" name="name" placeholder="Nome" required autofocus />
+				</div>
+				<div class="form-group">
+					<input type="text" name="surname" placeholder="Sobrenome" required />
+				</div>
+				<div class="form-group">
+					<input type="email" name="email" placeholder="E-mail" autocomplete="off" novalidate />
+				</div>
+				<button>Enviar</button>
+			</form>
+		</section>
+
+	</body>
+</html>
