@@ -107,6 +107,7 @@
 			</form>
 		</section>
 
+
 		<section>
 			<h2>Novalidate e autofocus</h2>
 			<form>
@@ -122,6 +123,29 @@
 				<button>Enviar</button>
 			</form>
 		</section>
+
+
+		<section>
+			<h2>Atributo Form</h2>
+			<form id="form1">
+				<div class="form-group">
+					<input type="text" name="name" placeholder="Nome" required />
+				</div>
+				<div class="form-group">
+					<input type="text" name="surname" placeholder="Sobrenome" required />
+				</div>
+				<div class="form-group">
+					<input type="email" name="email" placeholder="E-mail" />
+				</div>
+				<button>Enviar</button>
+				<button formnovalidate>Enviar sem validação (novalidate)</button>
+				<button formmethod="post">Enviar via post (formmethod)</button>
+				<button formaction="post.php">Enviar para post.php (formaction)</button>
+			</form>
+
+			<input type="color" name="color" form="form1" />
+		</section>
+
 
 	</body>
 </html>
